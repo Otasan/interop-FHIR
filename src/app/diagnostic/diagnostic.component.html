@@ -24,10 +24,8 @@
               </div>
 
               <div class="form-group">
-                <label for="confirmPassword">Patient :</label>
-                <input type="password"
-                  id="confirmPassword"
-                  placeholder="Password">
+                <label for="idPatient">Patient :</label>
+
               </div>
                
               <!--- Select gender Block --->
@@ -39,11 +37,25 @@
               </div>
 
               <div class="form-group">
-                <label for="confirmPassword">Praticien : </label>
-                <input type="password"
-                  id="confirmPassword"
-                  placeholder="Password">
+                <label for="MedecinObj">Praticien : </label>
+                {{myMedecin.name[0].given[0]}}
               </div>
+
+              <div class="form-group">
+                <label for="confirmPassword">Observation Médecin :</label>
+                <textarea id="story" name="story"
+                rows="5" cols="33">Valeur par défaut</textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="confirmPassword">Conclusions :</label>
+                <textarea id="story" name="story"
+                rows="5" cols="33">Valeur par défaut</textarea>
+              </div>
+
+
+
+
         
                
               
