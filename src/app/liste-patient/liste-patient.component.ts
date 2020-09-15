@@ -17,8 +17,9 @@ export class ListePatientComponent implements OnInit {
                                                     console.log(data[0].name[0]);});
   }
 
-  public pClicked(p:string){
-    console.log(p);
+  public pClicked(event){
+    let index = event.target.parentElement.attributes.id.nodeValue;
+    this._service.putCurrent(this.myPatients[index]);
   }
 
 }
