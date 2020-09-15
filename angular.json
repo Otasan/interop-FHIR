@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "interop-FHIR"
+    }
+  },
+  "defaultProject": "interop-FHIR",
+  "cli": {
+    "analytics": false
+  }
 }
