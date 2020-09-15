@@ -1,1 +1,27 @@
-<p>liste-patient works!</p>
+<ng-template zone></ng-template>
+
+<div >
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Nom</th>
+            <th>Date de naissance</th>
+            <th>Genre</th>
+        </tr>
+        <tr *ngFor="let p of myPatients" class='button' (click)="pClicked()">
+            <td>
+                {{p.id}}
+            </td>
+            <td>
+                {{p.name[0].family}}
+            </td>
+            <td>
+                {{p.birthDate}}
+            </td>
+            <td>
+                {{p.gender}}
+            </td>
+        </tr>
+    </table>
+    
+</div>
