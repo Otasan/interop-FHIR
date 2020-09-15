@@ -17,8 +17,8 @@ export class ListePatientComponent implements OnInit {
                                                     console.log(data[0].name[0]);});
   }
 
-  public pClicked(){
-    console.log("ee");
+  public pClicked(p:string){
+    console.log(p);
   }
 
 }
