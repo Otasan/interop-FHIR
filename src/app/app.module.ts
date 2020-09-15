@@ -5,20 +5,35 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ListePatientComponent } from './liste-patient/liste-patient.component';
 import { HomeComponent } from './home/home.component';
+<<<<<<< Updated upstream
 import { ZoneDirective } from './zone.directive';
 import { HttpClientModule } from '@angular/common/http';
+=======
+import { DiagnosticComponent } from './diagnostic/diagnostic.component';
+
+
+>>>>>>> Stashed changes
 
 @NgModule({
   declarations: [
     AppComponent,
     ListePatientComponent,
     HomeComponent,
+<<<<<<< Updated upstream
     ZoneDirective
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule
+=======
+    DiagnosticComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule
+
+>>>>>>> Stashed changes
   ],
   providers: [],
   bootstrap: [AppComponent]
