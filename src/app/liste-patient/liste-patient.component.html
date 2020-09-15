@@ -8,7 +8,7 @@
             <th>Date de naissance</th>
             <th>Genre</th>
         </tr>
-        <tr *ngFor="let p of myPatients" class='button' (click)="pClicked()">
+        <tr *ngFor="let p of myPatients; index as i" class='button' (click)="pClicked($event)" id={{i}}>
             <td>
                 {{p.id}}
             </td>

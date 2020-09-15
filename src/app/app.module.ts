@@ -7,13 +7,18 @@ import { ListePatientComponent } from './liste-patient/liste-patient.component';
 import { HomeComponent } from './home/home.component';
 import { ZoneDirective } from './zone.directive';
 import { HttpClientModule } from '@angular/common/http';
+import { DiagnosticComponent } from './diagnostic/diagnostic.component';
+import { FichePatientComponent } from './fiche-patient/fiche-patient.component';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     ListePatientComponent,
     HomeComponent,
-    ZoneDirective
+    ZoneDirective,
+    FichePatientComponent
   ],
   imports: [
     BrowserModule,
