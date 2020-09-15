@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { ZoneDirective } from './zone.directive';
 import { HttpClientModule } from '@angular/common/http';
 import { DiagnosticComponent } from './diagnostic/diagnostic.component';
+import { FichePatientComponent } from './fiche-patient/fiche-patient.component';
 
 
 
@@ -16,7 +17,8 @@ import { DiagnosticComponent } from './diagnostic/diagnostic.component';
     AppComponent,
     ListePatientComponent,
     HomeComponent,
-    ZoneDirective
+    ZoneDirective,
+    FichePatientComponent
   ],
   imports: [
     BrowserModule,

@@ -25,7 +25,7 @@ export class PatientsService {
 
   public putCurrent(c:PatientObj) : void{
     this.currentPatient = c;
-    this.hasCurrent= false;
+    this.hasCurrent= true;
   }
 
   public removeCurrent() : void{

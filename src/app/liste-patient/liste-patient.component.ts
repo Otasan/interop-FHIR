@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PatientObj } from '../patient-obj';
 import { PatientsService } from '../patients.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-liste-patient',
@@ -10,7 +11,7 @@ import { PatientsService } from '../patients.service';
 export class ListePatientComponent implements OnInit {
   myPatients: PatientObj[] = [];
 
-  constructor(private _service : PatientsService) { }
+  constructor(private _service : PatientsService, private _router:Router) { }
 
   ngOnInit(): void {
     this._service.getPatients().subscribe(data => {this.myPatients = data;
@@ -20,6 +21,7 @@ export class ListePatientComponent implements OnInit {
   public pClicked(event){
     let index = event.target.parentElement.attributes.id.nodeValue;
     this._service.putCurrent(this.myPatients[index]);
+    this._router.navigate(["/FichePatient"]);
   }
 
 }
