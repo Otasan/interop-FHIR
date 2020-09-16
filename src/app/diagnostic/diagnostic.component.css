@@ -3,6 +3,7 @@ textarea {
     font-size: .8rem;
     letter-spacing: 1px;
 }
+
 textarea {
     padding: 10px;
     line-height: 1.5;
@@ -14,4 +15,10 @@ textarea {
 label {
     display: block;
     margin-bottom: 10px;
+}
+
+.info {
+    width: 300px;
+    height: 100px;
+    background-color: rgba(184, 178, 178, 0.3);
 }
