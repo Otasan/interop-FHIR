@@ -1,0 +1,33 @@
+body {
+    font-family: 'Cardo', serif;
+    background-color: #edf2f1;
+}
+
+h1 {
+    font-size: 500%;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+}
+
+.btn {
+    font-family: 'Oswald', sans-serif;
+    padding: 100px;
+    font-size: xx-large
+}
+
+footer {
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 13px;
+}
