@@ -6,7 +6,8 @@ export class PatientObj {
             text:string,
             given:string[],
             prefix:string[],
-            suffix:string[]
+            suffix:string[],
+            family:string
         }[],
         public birthDate: Date,
         public gender: string,
