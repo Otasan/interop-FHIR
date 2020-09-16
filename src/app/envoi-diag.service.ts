@@ -16,7 +16,7 @@ export class EnvoiDiagService {
   getAll(): Observable<DiagnosticObj[]> {
     return this.http.get<DiagnosticObj[]>(this.apiUrl3);
   }
-  addDiagnostic(d: DiagnosticObj): Observable<Response> {
-    return this.http.post<Response>(this.apiUrl3, d);
+  addDiagnostic(d: DiagnosticObj): Observable<DiagnosticObj> {
+    return this.http.post<DiagnosticObj>(this.apiUrl3, d);
   }
 }

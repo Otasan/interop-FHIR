@@ -6,6 +6,7 @@ import { DiagnosticObj } from '../diagnostic-obj';
 import { FormControl, FormGroup } from '@angular/forms';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { Subject } from 'rxjs';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -24,7 +25,7 @@ export class DiagnosticComponent implements OnInit {
     conclusion: new FormControl('')
   });
 
-  constructor(private _Mservice : MedecinsService, private _Dservice:EnvoiDiagService) { }
+  constructor(private _Mservice : MedecinsService, private _Dservice:EnvoiDiagService, private _router:Router) { }
 
   ngOnInit(): void {
     this._Mservice.getMedecins().subscribe(data => {this.myMedecin = data; console.log(data.name[0].given[0]);})
@@ -57,7 +58,10 @@ export class DiagnosticComponent implements OnInit {
       issued : this.form.value.issued
     };
     console.log(res);
-    this._Dservice.addDiagnostic(res).subscribe(data =>{ console.log(data)});
+    this._Dservice.addDiagnostic(res).subscribe(data =>{
+      alert("Success");
+      this._router.navigate(["/home"]);
+    });
   }
   
 
