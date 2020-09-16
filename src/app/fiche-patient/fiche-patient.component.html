@@ -15,8 +15,20 @@
     <tr>
         <td>Téléphone :</td><td>{{myPatient.telecom[0].value}}</td>
     </tr>
+</table>
+
+<h2>Observations</h2>
+
+<table>
     <tr>
-        <td>Médecin Traitant :</td><td>{{myPatient.generalPractitioner}}</td>
+        <th>Status</th>
+        <th>Code</th>
+        <th>Valeur</th>
+    </tr>
+    <tr *ngFor="let o of myObser">
+        <td>{{o.status}}</td>
+        <td>{{o.code.text}}</td>
+        <td>{{o.valueString}}</td>
     </tr>
 </table>
 
