@@ -1,69 +1,63 @@
 <div class="row custom-row">
-    <div class= "col-sm-5 custom-container jumbotron">
-         
-      <form class="form-horizontal">
-          <fieldset>
-          <legend>Diagnostic</legend>
-           
-              <!--- Email Block --->
-              <div class="form-group">
-                <label for="inputEmail">Statues :</label>
-                <select name = 'statues' size = '1'>
+
+    <div class="col-md-6 custom-container jumbotron" style="padding-left: 100px;">
+
+        <form class="form-horizontal">
+            <fieldset>
+                <legend>Diagnostic</legend>
+
+                <!--- Email Block --->
+                <div class="form-group">
+                    <label for="inputEmail">Statues :</label>
+                    <select name='statues' size='1'>
                     <option>registered</option>
                     <option>partial</option>
                     <option>preliminary</option>
                     <option>final</option>
                 </select>
-              </div>
-              <!--- Password Block --->
-              <div class="form-group">
-                <label for="inputPassword">Code :</label>
-                <input type="code"
-                  id="idcode"
-                  placeholder="Code">
-              </div>
+                </div>
+                <!--- Password Block --->
+                <div class="form-group">
+                    <label for="inputPassword">Code :</label>
+                    <input type="code" id="idcode" placeholder="Code">
+                </div>
 
-              <div class="form-group">
-                <label for="idPatient">Patient : 123456789</label>
+                <div class="form-group">
+                    <label for="idPatient">Patient : 123456789</label>
 
-              </div>
-               
-              <!--- Select gender Block --->
-              <div class="form-group">
-                <label for="datepublication">Publié :</label>
-                <input type="datetime-local"
-                  id="instant"
-                >
-              </div>
+                </div>
 
-              <div class="form-group">
-                <label for="MedecinObj">Praticien : </label>
-                {{myMedecin.name[0].given[0]}}
-              </div>
+                <!--- Select gender Block --->
+                <div class="form-group">
+                    <label for="datepublication">Publié :</label>
+                    <input type="datetime-local" id="instant">
+                </div>
 
-              <div class="form-group">
-                <label for="confirmPassword">Observation Médecin :</label>
-                <textarea id="story" name="story"
-                rows="5" cols="33">Valeur par défaut</textarea>
-              </div>
+                <div class="form-group">
+                    <label for="MedecinObj">Praticien : </label> {{myMedecin.name[0].given[0]}}
+                </div>
 
-              <div class="form-group">
-                <label for="confirmPassword">Conclusions :</label>
-                <textarea id="story" name="story"
-                rows="5" cols="33">Valeur par défaut</textarea>
-              </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Observation Médecin :</label>
+                    <textarea id="story" name="story" rows="5" cols="33">Valeur par défaut</textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword">Conclusions :</label>
+                    <textarea id="story" name="story" rows="5" cols="33">Valeur par défaut</textarea>
+                </div>
 
 
 
 
-        
-               
-              
-             <!--- Buttons Block --->
-              <div class="form-group">
-                  <button type="submit" class="btn btn-primary">Envoi</button>
-              </div>
-          </fieldset>
-      </form>
+
+
+
+                <!--- Buttons Block --->
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Envoi</button>
+                </div>
+            </fieldset>
+        </form>
     </div>
-  </div>
+</div>
