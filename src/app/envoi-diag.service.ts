@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http'
 import { Observable } from 'rxjs';
 import { DiagnosticComponent } from './diagnostic/diagnostic.component';
+import { DiagnosticObj } from './diagnostic-obj';
 
 
 @Injectable({
@@ -12,11 +13,10 @@ export class EnvoiDiagService {
 
   constructor(private http : HttpClient) { }
 
-  getAll(): Observable<Array<DiagnosticComponent>> {
-    return this.http.get<Array<DiagnosticComponent>>(this.apiUrl3);
+  getAll(): Observable<DiagnosticObj[]> {
+    return this.http.get<DiagnosticObj[]>(this.apiUrl3);
   }
-  //addDiagnostic(d: DiagnosticComponent): Observable<DiagnosticComponent> {
-    //return this.http.post(this.apiUrl3, d);
-
-  //}
+  addDiagnostic(d: DiagnosticObj): Observable<Response> {
+    return this.http.post<Response>(this.apiUrl3, d);
+  }
 }

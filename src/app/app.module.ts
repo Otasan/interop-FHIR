@@ -9,6 +9,7 @@ import { ZoneDirective } from './zone.directive';
 import { HttpClientModule } from '@angular/common/http';
 import { DiagnosticComponent } from './diagnostic/diagnostic.component';
 import { FichePatientComponent } from './fiche-patient/fiche-patient.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 
 
@@ -18,12 +19,15 @@ import { FichePatientComponent } from './fiche-patient/fiche-patient.component';
     ListePatientComponent,
     HomeComponent,
     ZoneDirective,
-    FichePatientComponent
+    FichePatientComponent,
+    DiagnosticComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
