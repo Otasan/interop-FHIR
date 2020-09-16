@@ -1,0 +1,34 @@
+.titre {
+    font-family: 'Cardo', serif;
+    font-weight: bolder;
+}
+
+table.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table {
+    border-collapse: collapse;
+    width: 70%;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2
+}
+
+thead {
+    background-color: #c71616;
+    color: white;
+    font-weight: bolder;
+}
+
+tbody tr:hover {
+    background-color: #f9bdbd;
+}

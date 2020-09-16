@@ -1,34 +1,47 @@
-<h1>Fiche Patient</h1>
-<table>
+<div class="row" style="font-weight: bolder;">
+    <div class="col-lg-12 text-center" style="padding-top: 10px; padding-bottom: 40px; font-family: 'Tahoma'">
+        <h1>FICHE PATIENT</h1>
+    </div>
+</div>
+
+<table class="center">
     <tr>
-        <td>Nom : </td><td>{{myPatient.name[0].given[0]}} {{myPatient.name[0].family}}</td>
+        <td class="titre">Nom : </td>
+        <td>{{myPatient.name[0].given[0]}} {{myPatient.name[0].family}}</td>
     </tr>
     <tr>
-        <td>Identifiant :</td><td>{{myPatient.id}}</td>
+        <td class="titre">Identifiant :</td>
+        <td>{{myPatient.id}}</td>
     </tr>
     <tr>
-        <td>Genre :</td><td>{{myPatient.gender}}</td>
+        <td class="titre">Genre :</td>
+        <td>{{myPatient.gender}}</td>
     </tr>
     <tr>
-        <td>Date De Naissance :</td><td>{{myPatient.birthDate}}</td>
+        <td class="titre">Date De Naissance :</td>
+        <td>{{myPatient.birthDate}}</td>
     </tr>
     <tr>
-        <td>Téléphone :</td><td>{{myPatient.telecom[0].value}}</td>
+        <td class="titre">Téléphone :</td>
+        <td>{{myPatient.telecom[0].value}}</td>
     </tr>
 </table>
 
-<h2>Observations</h2>
+<div class="row" style="font-weight: bolder;">
+    <div class="col-lg-12 text-center" style="padding-top: 10px; padding-bottom: 40px; font-family: 'Tahoma'">
+        <h1>OBSERVATIONS</h1>
+    </div>
+</div>
 
-<table>
-    <tr>
-        <th>Status</th>
-        <th>Code</th>
-        <th>Valeur</th>
-    </tr>
+<table class="center">
+    <thead>
+        <th class="titre">Status</th>
+        <th class="titre">Code</th>
+        <th class="titre">Valeur</th>
+    </thead>
     <tr *ngFor="let o of myObser">
         <td>{{o.status}}</td>
         <td>{{o.code.text}}</td>
         <td>{{o.valueString}}</td>
     </tr>
 </table>
-
