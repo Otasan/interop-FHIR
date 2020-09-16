@@ -1,14 +1,14 @@
 <div class="row custom-row">
     <div class= "col-sm-5 custom-container jumbotron">
          
-      <form class="form-horizontal">
+      <form class="form-horizontal" [formGroup]="form" (ngSubmit)="onSubmit()">
           <fieldset>
           <legend>Diagnostic</legend>
            
               <!--- Email Block --->
               <div class="form-group">
                 <label for="inputEmail">Statues :</label>
-                <select name = 'statues' size = '1'>
+                <select name = 'statues' size = '1' formControlName="status">
                     <option>registered</option>
                     <option>partial</option>
                     <option>preliminary</option>
@@ -20,7 +20,13 @@
                 <label for="inputPassword">Code :</label>
                 <input type="code"
                   id="idcode"
-                  placeholder="Code">
+                  placeholder="Code"
+                  formControlName="code"/>
+                <label>Description</label>
+                <input type="text"
+                  id="idDisplay"
+                  placeholder=""
+                  formControlName="display"/>
               </div>
 
               <div class="form-group">
@@ -33,7 +39,7 @@
                 <label for="datepublication">Publié :</label>
                 <input type="datetime-local"
                   id="instant"
-                >
+                  formControlName="issued"/>
               </div>
 
               <div class="form-group">
@@ -41,16 +47,17 @@
                 {{myMedecin.name[0].given[0]}}
               </div>
 
-              <div class="form-group">
+              <!--div class="form-group">
                 <label for="confirmPassword">Observation Médecin :</label>
                 <textarea id="story" name="story"
                 rows="5" cols="33">Valeur par défaut</textarea>
-              </div>
+              </div-->
 
               <div class="form-group">
                 <label for="confirmPassword">Conclusions :</label>
                 <textarea id="story" name="story"
-                rows="5" cols="33">Valeur par défaut</textarea>
+                  rows="5" cols="33"
+                  formControlName="conclusion">Valeur par défaut</textarea>
               </div>
 
 
@@ -61,7 +68,7 @@
               
              <!--- Buttons Block --->
               <div class="form-group">
-                  <button type="submit" class="btn btn-primary">Envoi</button>
+                  <button type="submit" class="btn btn-primary" [disabled]="!form.valid">Envoi</button>
               </div>
           </fieldset>
       </form>

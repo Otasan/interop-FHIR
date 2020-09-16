@@ -1,0 +1,37 @@
+table.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table {
+    border-collapse: collapse;
+    width: 70%;
+}
+
+
+/*th.titre {
+    font-weight: bolder;
+}*/
+
+td {
+    text-align: left;
+    padding: 8px;
+}
+
+td.titre {
+    font-weight: bolder;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2
+}
+
+tbody tr:hover {
+    background-color: #f9bdbd;
+}
+
+thead {
+    background-color: #c71616;
+    color: white;
+    font-weight: bolder;
+}

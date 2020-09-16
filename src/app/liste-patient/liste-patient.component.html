@@ -1,27 +1,41 @@
 <ng-template zone></ng-template>
 
-<div >
-    <table>
-        <tr>
-            <th>ID</th>
-            <th>Nom</th>
-            <th>Date de naissance</th>
-            <th>Genre</th>
-        </tr>
-        <tr *ngFor="let p of myPatients; index as i" class='button' (click)="pClicked($event)" id={{i}}>
-            <td>
-                {{p.id}}
-            </td>
-            <td>
-                {{p.name[0].family}}
-            </td>
-            <td>
-                {{p.birthDate}}
-            </td>
-            <td>
-                {{p.gender}}
-            </td>
-        </tr>
+<body>
+    <div class="row" style="font-weight: bolder;">
+        <div class="col-lg-12 text-center" style="padding-top: 10px; padding-bottom: 40px; font-family: 'Tahoma'">
+            <h1>LISTE DES PATIENTS</h1>
+        </div>
+    </div>
+
+    <table class="center">
+
+        <thead>
+            <td>ID</td>
+            <td>Nom</td>
+            <td>Date de naissance</td>
+            <td>Genre</td>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let p of myPatients; index as i" style="padding-top: 10px; padding-bottom: 10px;" (click)="pClicked($event)" id={{i}}>
+
+                <td>
+                    {{p.id}}
+                </td>
+
+                <td>
+                    {{p.name[0].family}}
+                </td>
+
+                <td>
+                    {{p.birthDate}}
+                </td>
+
+                <td>
+                    {{p.gender}}
+                </td>
+
+            </tr>
+        </tbody>
     </table>
-    
-</div>
+</body>
